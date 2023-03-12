@@ -41,23 +41,25 @@ figure {
     height: 200px;
     width: 100%;
     margin-bottom: 25px;
+    align-items: flex-end;
+    justify-content: flex-end;
     background-image: url("");
     background-size: cover;
     background-position: center;
+    background-color: aquamarine;
 }
 
 figure figcaption{
     height: 50px;
-    width: 100%;
+    width: 200px;
     display: flex;
-    align-items: flex-end;
     background: var(--light-green);
+    font-size: 30px;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2%;
 }
 
 .about-me-content {
@@ -77,13 +79,22 @@ main {
     font-size: 56px;
 }
 
+.about-me-content .about-details {
+    padding: 15px;
+    margin: 20px;
+}
+
+.about-details {
+    width: 50%;
+}
+
 .work-content {
     display: flex;
 }
 
 .work-content .work-h2 {
     padding: 15px;
-    margin-left: 10%;
+    margin-left: 167px;
     display: flex;
     border-style: solid;
     border-top-style: none;
@@ -99,7 +110,11 @@ main {
 }
 
 .big-work-card {
-    padding: 200px;
+    padding: 50px;
+    width: 1110px;
+    height: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     border-style: solid;
     border-width: 5px;
@@ -113,9 +128,8 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     padding: 50px;
-    height: 400px;
-    align-content: space-between;
-    justify-content: center;
+    width: 500px;
+    height: 200px;
     text-align: center;
     border-style: solid;
     border-width: 5px;
