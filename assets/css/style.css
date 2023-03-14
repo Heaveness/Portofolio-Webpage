@@ -28,25 +28,17 @@ body {
 
 .top-bar nav {
     padding: 15px;
-    margin: 20px;
+    margin: auto 20px;
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 32px;
 }
 
 .top-bar a {
     color: var(--bright-colour);
-}
-
-.top-bar ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-}
-
-.top-bar li {
-    padding: 15px;
-    list-style: none;
+    padding: 14px 20px;
+    text-align: center;
 }
 
 figure {
@@ -241,7 +233,7 @@ main {
 
 .contact-content h2 {
     padding: 15px;
-    margin: auto -12px;
+    margin: auto -13px;
     font-size: 56px;
 }
 
@@ -254,19 +246,10 @@ main {
     font-size: 32px;
 }
 
-.contact-content ul {
-    padding: 15px;
-    margin: 20px;
-    display: flex;
-}
-
-.contact-content li {
-    padding: 15px;
-    list-style: none;
-}
-
 .contact-content a {
     color: var(--black-colour);
+    padding: 15px 20px;
+    text-align: center;
 }
 
 @media screen and (min-width: 981px) {
@@ -342,7 +325,10 @@ main {
 @media screen and (max-width:768px) {
     .top-bar,
     figure,
-    figcaption {
+    figcaption,
+    .about-details,
+    .work-content,
+    .contact-content {
         width: 100%;
         flex-direction: column;
     }
@@ -351,7 +337,10 @@ main {
 @media screen and (max-width:575px) {
     .top-bar,
     figure,
-    figcaption {
+    figcaption,
+    .about-details,
+    .work-content,
+    .contact-content {
         width: 100%;
         flex-direction: column;
     }
