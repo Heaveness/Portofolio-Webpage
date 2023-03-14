@@ -1,12 +1,12 @@
 :root {
     --dark-colour: #044887;
     --light-colour: #087deb;
+    --bright-colour: #f0f8ff;
+    --black-colour: #000000;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.3;
+    margin: 0 auto;
 }
 
 .top-bar {
@@ -19,7 +19,7 @@ body {
 .top-bar h1 {
     padding-left: 30px;
     padding-right: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 25px;
     font-size: 56px;
     background: var(--light-colour);
@@ -32,72 +32,143 @@ body {
     font-size: 32px;
 }
 
-.top-bar a {
-    color: aliceblue;
+a {
+    color: var(--bright-colour);
 }
 
-.top-bar nav ul li {
-    padding: 15px;
-    display: inline;
+ul {
+    width: 100%;
+    display: flex;
     list-style: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 32px;
+    justify-content: flex-end;
+}
+
+li {
+    padding: 15px;
+    list-style: none;
 }
 
 figure {
     display: flex;
     height: 350px;
     width: 100%;
-    margin-bottom: 25px;
     align-items: flex-end;
     justify-content: flex-end;
     background-color: aquamarine;
     background-image: url("../images/background-image-(marek-piwnicki).jpg");
-    background-size: cover;
+    background-size: fill;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+figure img {
+    margin: 80px -255px;
+    display: flex;
+    border-style: solid;
+    border-color: var(--black-colour);
+    border-width: 5px;
+    border-radius: 25px;
 }
 
 figure figcaption{
     margin: 10px;
     height: 50px;
-    width: 10%;
+    width: 200px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-style: solid;
     border-radius: 25px;
     background: var(--light-colour);
-    font-size: 30px;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
+    font-size: 44px;
 }
 
 .about-me-content {
-    margin-left: 2%;
-    width: 100%;
-    height: 25%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about-me-content .about-h2 {
     padding: 15px;
-    margin-left: 25px;
+    margin: auto;
     display: flex;
-    border-right: 3px solid #044887;
     line-height: 150px;
     font-size: 56px;
 }
 
 .about-details {
     padding: 15px;
-    margin: 2%;
+    margin: 20px auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 75%;
+    width: 80%;
+}
+
+@media screen and (min-width: 981px) {
+    .about-h2 {
+        border-right: 3px solid #044887;;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .top-bar,
+    figure,
+    figcaption {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    figure img{
+        margin: 25px auto;
+    }
+    
+    .about-me-content {
+        flex-direction: column;
+    }
+
+    .about-h2 {
+        border-right: 0;
+        text-decoration: underline;
+    }
+
+    .about-details {
+        border-bottom: 3px solid #044887;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-bar,
+    figure,
+    figcaption {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .top-bar,
+    figure,
+    figcaption {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+/*
+980px
+768px
+575px
+*\
+
+/*
+
+main {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .work-content {
@@ -126,14 +197,14 @@ main {
     margin-top: 25%;
     padding-left: 1%;
     position: relative;
-    bottom: 90%;
+    bottom: 99%;
     right: 2px;
     width: 15%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     background: var(--dark-colour);
-    z-index: 0;
+    z-index: 1;
 }
 
 .card-title {
@@ -141,11 +212,11 @@ main {
     padding-left: 2%;
     position: relative;
     bottom: 65%;
-    width: 32%;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
     background: var(--dark-colour);
-    z-index: 0;
+    z-index: 1;
 }
 
 .card-title a {
@@ -175,10 +246,15 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+    background-color: #044887;
     border-style: solid;
     border-color: #044887;
     border-width: 5px;
     border-radius: 25px;
+}
+
+.big-work-card a{
+    z-index: 1;
 }
 
 .big-work-card h2 {
@@ -191,10 +267,15 @@ main {
     width: 44%;
     height: 200px;
     text-align: center;
+    background-color: #044887;
     border-style: solid;
     border-color: #044887;
     border-width: 5px;
     border-radius: 25px;
+}
+
+.work-card a {
+    z-index: 1;
 }
 
 .big-work-card img {
@@ -202,6 +283,9 @@ main {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    border-radius: 16px;
+    opacity: 0.5;
+    transition: 0.5s;
 }
 
 .work-card img {
@@ -209,6 +293,13 @@ main {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    border-radius: 16px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.card-boxes img:hover {
+    opacity: 1.0;
 }
 
 .contact-content {
@@ -241,3 +332,5 @@ main {
 .contact-content a {
     color: black;
 }
+
+*\
