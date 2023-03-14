@@ -6,6 +6,7 @@
 }
 
 body {
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -62,15 +63,15 @@ figure {
 }
 
 figure img {
-    margin: 80px -255px;
+    margin: 80px -290px;
     display: flex;
     border-style: solid;
-    border-color: var(--black-colour);
     border-width: 5px;
     border-radius: 25px;
 }
 
 figure figcaption{
+    padding: 10px;
     margin: 10px;
     height: 50px;
     width: 200px auto;
@@ -86,15 +87,11 @@ figure figcaption{
 .about-me-content {
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .about-me-content .about-h2 {
     padding: 15px;
-    margin: auto;
-    display: flex;
-    line-height: 150px;
+    margin: 40px auto;
     font-size: 56px;
 }
 
@@ -105,10 +102,147 @@ figure figcaption{
     width: 80%;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-content {
+    margin: auto 10px;
+    width: 100%;
+    display: flex;
+}
+
+.work-h2 {
+    padding: 15px;
+    margin: 20px auto;
+    font-size: 56px;
+}
+
+
+.work-card-boxes{
+    width: 80%;
+    margin: auto -18px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+
+.big-work-card {
+    margin: auto 10px;
+    width: 90%;
+    height: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: #044887;
+    border-style: solid;
+    border-color: #044887;
+    border-width: 5px;
+    border-radius: 25px;
+}
+
+.big-work-card a{
+    z-index: 1;
+}
+
+.big-work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0.5;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.big-card-title {
+    margin-top: auto 0;
+    padding-left: 1%;
+    position: relative;
+    bottom: 100px;
+    right: 2px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: var(--dark-colour);
+    z-index: 1;
+}
+
+.big-card-title a {
+    font-size: 24px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.big-card-title p {
+    color: aliceblue;
+}
+
+.small-work-card {
+    margin: 10px;
+    flex-wrap: wrap;
+    width: 44.3%;
+    height: 200px;
+    text-align: center;
+    background-color: #044887;
+    border-style: solid;
+    border-color: #044887;
+    border-width: 5px;
+    border-radius: 25px;
+}
+
+.small-work-card a {
+    z-index: 1;
+}
+
+.small-work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 16px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.small-card-title {
+    margin-top: 5%;
+    padding-left: 2%;
+    position: relative;
+    bottom: 65%;
+    width: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--dark-colour);
+    z-index: 1;
+}
+
+.small-card-title a {
+    font-size: 24px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.small-card-title p {
+    color: aliceblue;
+}
+
+.work-card-boxes img:hover {
+    opacity: 1.0;
+}
+
 @media screen and (min-width: 981px) {
     .about-h2 {
-        border-right: 3px solid #044887;;
+        border-right: 3px solid #044887;
     }
+
+    .work-h2 {
+        border-right: 3px solid #044887;
+    }
+    
 }
 
 @media screen and (max-width:980px) {
@@ -136,6 +270,18 @@ figure figcaption{
         border-bottom: 3px solid #044887;
         width: 100%;
         flex-direction: column;
+    }
+
+    .work-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 3px solid #044887;
+    }
+
+    .work-h2 {
+        border-right: 0;
+        text-decoration: underline;
     }
 }
 
