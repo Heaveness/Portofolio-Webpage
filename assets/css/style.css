@@ -1,22 +1,28 @@
+/* The root global variables for the rest of CSS properties to use below. */
 :root {
     --dark-colour: #044887;
     --light-colour: #087deb;
     --bright-colour: #f0f8ff;
     --black-colour: #000000;
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* The properties for the body code block. */
 body {
     max-width: 1920px;
     margin: 0 auto;
 }
 
+/* The properties for the header navigation bar. */
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--dark-colour);
+    font-family: var(--font-family);
 }
 
+/* The properties for the h1 title of the header element. */
 .top-bar h1 {
     padding-left: 30px;
     padding-right: 10px;
@@ -26,21 +32,23 @@ body {
     background: var(--light-colour);
 }
 
+/* The properties for the list of links in the header element. */
 .top-bar nav {
     padding: 15px;
     margin: auto 20px;
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 32px;
 }
 
+/* The properties for the link's text. */
 .top-bar a {
     color: var(--bright-colour);
     padding: 14px 20px;
     text-align: center;
 }
 
+/* The properties for the element that includes the image below the header and above the About me section. */
 figure {
     display: flex;
     height: 350px;
@@ -52,8 +60,10 @@ figure {
     background-size: fill;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: var(--font-family);
 }
 
+/* The properties for the image itself. */
 figure img {
     margin: 80px -290px;
     display: flex;
@@ -62,6 +72,7 @@ figure img {
     border-radius: 25px;
 }
 
+/* The properties for the caption below the avatar image within the figure element. */
 figure figcaption{
     padding: 10px;
     margin: 10px;
@@ -76,42 +87,49 @@ figure figcaption{
     font-size: 44px;
 }
 
+/* The properties for the main element code block. */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* The properties for the About Me code block. */
 .about-me-content {
     margin: 0 auto;
     display: flex;
+    font-family: var(--font-family);
 }
 
+/* The properties for the h2 title within the About Me. */
 .about-me-content .about-h2 {
     padding: 15px;
     margin: 40px auto;
     font-size: 56px;
 }
 
+/* The properties for the text element within the About Me. */
 .about-details {
     padding: 15px;
-    margin: 20px auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 6px;
     width: 80%;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
+/* The properties for the Work code block. */
 .work-content {
     margin: auto 10px;
     width: 100%;
     display: flex;
+    font-family: var(--font-family);
 }
 
+/* The properties for the h2 title within the Work section. */
 .work-h2 {
     padding: 15px;
-    margin: 20px auto;
+    margin: 20px 138px;
     font-size: 56px;
 }
 
-
+/* The properties for the card boxes within the Work section. */
 .work-card-boxes{
     width: 80%;
     margin: auto -18px;
@@ -120,7 +138,7 @@ main {
     z-index: 0;
 }
 
-
+/* The properties for the first large card box within the Work section. */
 .big-work-card {
     margin: auto 10px;
     width: 90%;
@@ -135,10 +153,12 @@ main {
     border-radius: 25px;
 }
 
+/* The properties for the link within the image to prevent it from being hidden. */
 .big-work-card a{
     z-index: 1;
 }
 
+/* The properties for the image of the big card box. */
 .big-work-card img {
     width: 100%;
     height: 100%;
@@ -149,6 +169,7 @@ main {
     z-index: -1;
 }
 
+/* The properties for the title card within the big card box. */
 .big-card-title {
     margin-top: auto 0;
     padding-left: 1%;
@@ -163,16 +184,19 @@ main {
     z-index: 1;
 }
 
+/* The properties for the link text itself within the title card of the big card box. */
 .big-card-title a {
     font-size: 24px;
     text-decoration: none;
     color: aliceblue;
 }
 
+/* The properties for the text under the link of the title card. */
 .big-card-title p {
     color: aliceblue;
 }
 
+/* The properties for the four small card boxes within the Work section. */
 .small-work-card {
     margin: 10px;
     flex-wrap: wrap;
@@ -186,10 +210,12 @@ main {
     border-radius: 25px;
 }
 
+/* The properties for the text link itself within the title cards of the four small card boxes. */
 .small-work-card a {
     z-index: 1;
 }
 
+/* The properties for the image within the small card boxes. */
 .small-work-card img {
     width: 100%;
     height: 100%;
@@ -200,6 +226,7 @@ main {
     transition: 0.5s;
 }
 
+/* The properties for the title card within the small card boxes. */
 .small-card-title {
     margin-top: 5%;
     padding-left: 2%;
@@ -212,31 +239,38 @@ main {
     z-index: 1;
 }
 
+/* The properties for the link text within the title card. */
 .small-card-title a {
     font-size: 24px;
     text-decoration: none;
     color: aliceblue;
 }
 
+/* The properties for the text below the link within the title card. */
 .small-card-title p {
     color: aliceblue;
 }
 
+/* The properties for the card boxes to change opacity when mouse is hovered towards it. */
 .work-card-boxes img:hover {
     opacity: 1.0;
 }
 
+/* The properties for the Contact Me code block. */
 .contact-content {
     margin: auto 0;
     display: flex;
+    font-family: var(--font-family);
 }
 
+/* The properties for the h2 title within the Contact Me section. */
 .contact-content h2 {
     padding: 15px;
-    margin: auto -13px;
+    margin: auto -10px;
     font-size: 56px;
 }
 
+/* The properties for the list of links within the Contact Me section. */
 .contact-content section {
     padding: 30px;
     margin: 20px auto;
@@ -246,12 +280,14 @@ main {
     font-size: 32px;
 }
 
+/* The properties for the link text within the Contact Me section. */
 .contact-content a {
     color: var(--black-colour);
     padding: 15px 20px;
     text-align: center;
 }
 
+/* The properties for the media query that adds the border lines for each h2 element within the main code block. */
 @media screen and (min-width: 981px) {
     .about-h2 {
         border-right: 3px solid #044887;
@@ -266,6 +302,7 @@ main {
     }
 }
 
+/* The properties for a smaller screen below 980px. */
 @media screen and (max-width:980px) {
     .top-bar,
     figure,
@@ -322,6 +359,7 @@ main {
     }
 }
 
+/* The properties for a much smaller screen below 768px. */
 @media screen and (max-width:768px) {
     .top-bar,
     figure,
@@ -334,6 +372,7 @@ main {
     }
 }
 
+/* The properties for a even smaller screen below 575px. */
 @media screen and (max-width:575px) {
     .top-bar,
     figure,
